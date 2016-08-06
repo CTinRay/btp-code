@@ -19,12 +19,18 @@
             <label>Program Counter<input id="pc" type="number" value="0"></label>
         </div>
         <div class="row">
-            <table id="rom" class="col-md-6">
-                
-            </table>
-            <table id="ram" class="col-md-6">
-                
-            </table>
+            <div class="col-md-6">
+                <table id="rom" class="table">
+                    <thead><th>Address</th><th>Value</th></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table id="ram" class="table">
+                    <thead><th>Address</th><th>Value</th></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
     </div>
     <script src="js/config.js"></script>
@@ -36,3 +42,4 @@
     <script src="js/init.js"></script>
     <link rel="stylesheet" href="./css/memory.css">
 </body>
+
