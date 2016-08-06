@@ -104,3 +104,24 @@ UI.export = function(){
     let url = window.URL.createObjectURL(data);
     window.open(url, ".asm");    
 };
+
+UI.import = function(){
+    let importFile = document.getElementById('importFile');
+    importFile.click();    
+};
+
+UI.loadFile = function(){
+    let file = document.getElementById('importFile').files[0];
+    var reader = new FileReader();
+    reader.onload = function(reader){
+        UI.loadProgram(reader.target.result.split('\n'));
+    };
+    reader.readAsText(file);
+};
+
+UI.loadProgram = function(program){
+    let cells = document.getElementById('rom').getElementsByTagName('input');
+    for(let i = 0; i < cells.length && i < program.length; ++i ){
+        cells[i].value = program[i];
+    }
+};
