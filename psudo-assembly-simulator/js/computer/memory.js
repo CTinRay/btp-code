@@ -24,9 +24,11 @@ Computer.Memory = function(domId){
         memory.highlight = address;
     };
     
-    memory.read = function(address){
+    memory.read = function(address){        
         highlight(address);
-        return memory.cells[address].value;
+        let val = memory.cells[address].value;
+        if( isNaN(val) ) return val;
+        else return Number(val);
     };
     
     memory.write = function(address, value){
