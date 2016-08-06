@@ -88,3 +88,19 @@ UI.stop = function(){
         cell.removeAttribute('disabled');
     }
 };
+
+UI.export = function(){    
+    let cells = document.getElementById('rom').getElementsByTagName('input');
+    let program = [];
+    for(let cell of cells){
+        program.push(cell.value);
+    }
+    program = program.join('\n');
+    
+    var data = new Blob([program], {type: 'text/plain'});
+
+    // skip prevention of mem leak !!!!
+    
+    let url = window.URL.createObjectURL(data);
+    window.open(url, ".asm");    
+};
