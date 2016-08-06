@@ -4,7 +4,7 @@ var Computer = Computer || {};
 Computer.Memory = function(domId){
     var memory = {
         highlight: -1,
-        table: document.getElementById(domId)        
+        table: document.getElementById(domId).getElementsByTagName('tbody')[0]        
     };
     memory.rows = memory.table.getElementsByTagName('tr');
     memory.cells = memory.table.getElementsByTagName('input');
