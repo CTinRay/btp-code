@@ -5,6 +5,7 @@ Computer.init = function(romId, ramId, pcId){
     Computer.ram = Computer.Memory(ramId);
     Computer.pc = document.getElementById(pcId);
     Computer.pc.value = 0;
+    Computer.running = false;
 };
 
 Computer.cycle = function(){
@@ -14,3 +15,20 @@ Computer.cycle = function(){
     Computer.pc.value = Instruction[op].exe(Number(Computer.pc.value), Computer.ram, args);
 };
 
+Computer.run = function(){
+    if( !Computer.running ){
+        Computer.running = true;
+        Computer.worker();
+    }
+};
+
+Computer.worker = function(){
+    if(Computer.running){
+        Computer.cycle();
+        setTimeout(Computer.worker, Config.cycleInterval);
+    }
+};
+
+Computer.stop = function(){
+    Computer.running = false;
+};
