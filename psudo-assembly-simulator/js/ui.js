@@ -41,8 +41,7 @@ UI.clearRomErrors = function(errors){
     }
 };
 
-
-UI.stepRun = function(){
+UI.checkRom = function(){
     UI.clearRomErrors();
     let cells = document.getElementById('rom').getElementsByTagName('input');
     let program = [];
@@ -51,14 +50,25 @@ UI.stepRun = function(){
     }
     let errors = Checker.check(program);
     if( errors.length === 0 ){
-        Computer.cycle();
+        return true;        
     }
     else{
         UI.showRomErrors(errors);
+        return false;
     }
 };
 
+UI.stepRun = function(){
+    if(!UI.checkRom()){
+        return;
+    }
+    Computer.cycle();
+};
+
 UI.run = function(){
+    if(!UI.checkRom()){
+        return;
+    }
     document.getElementById('stop').removeAttribute('disabled');
     document.getElementById('stepRun').setAttribute('disabled', 'disabled');
     let cells = document.getElementById('rom').getElementsByTagName('input');
