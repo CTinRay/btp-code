@@ -42,7 +42,7 @@ var Instruction = {
     inc: {
         nArg: 2,
         exe: function(pc, ram, args){
-            ram.write(args[0], ram.read(args[0]) + args[1]);
+            ram.write(args[0], ram.read(args[0]) + Number(args[1]));
             return pc + 1;
         }
     },
