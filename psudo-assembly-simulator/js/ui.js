@@ -44,7 +44,7 @@ UI.stepRun = function(){
     let cells = document.getElementById('rom').getElementsByTagName('input');
     let program = [];
     for(let cell of cells){
-        program.append(cell.value);
+        program.push(cell.value);
     }
     let errors = Checker.check(program);
     if( errors.length === 0 ){
