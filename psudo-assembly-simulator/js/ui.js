@@ -19,7 +19,10 @@ UI.init = function(){
         }
     };
     initTable(Config.romSize, document.getElementById('rom'), 'text', 'hlt');
-    initTable(Config.ramSize, document.getElementById('ram'), 'number', 0);    
+    initTable(Config.ramSize, document.getElementById('ram'), 'number', 0);
+
+    document.getElementById('stop').setAttribute('disabled', 'disabled');
+    document.getElementById('stepRun').removeAttribute('disabled');
 };
 
 UI.showRomErrors = function(errors){
@@ -52,5 +55,26 @@ UI.stepRun = function(){
     }
     else{
         UI.showRomErrors(errors);
+    }
+};
+
+UI.run = function(){
+    document.getElementById('stop').removeAttribute('disabled');
+    document.getElementById('stepRun').setAttribute('disabled', 'disabled');
+    let cells = document.getElementById('rom').getElementsByTagName('input');
+    for(let cell of cells){
+        cell.setAttribute('disabled', 'disabled');
+    }
+    Computer.run();
+};
+
+
+UI.stop = function(){
+    Computer.stop();
+    document.getElementById('stop').setAttribute('disabled', 'disabled');
+    document.getElementById('stepRun').removeAttribute('disabled');
+    let cells = document.getElementById('rom').getElementsByTagName('input');
+    for(let cell of cells){
+        cell.removeAttribute('disabled');
     }
 };
