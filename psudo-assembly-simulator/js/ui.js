@@ -21,3 +21,36 @@ UI.init = function(){
     initTable(Config.romSize, document.getElementById('rom'), 'text', 'hlt');
     initTable(Config.ramSize, document.getElementById('ram'), 'number', 0);    
 };
+
+UI.showRomErrors = function(errors){
+    let rows = document.getElementById('rom').
+        getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+    for(let error of errors){
+        rows[error].className += ' has-error';
+    }
+};
+
+UI.clearRomErrors = function(errors){
+    let rows = document.getElementById('rom').
+        getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+    for(let row of rows){
+        row.className = row.className.replace(' has-error', '');
+    }
+};
+
+
+UI.stepRun = function(){
+    UI.clearRomErrors();
+    let cells = document.getElementById('rom').getElementsByTagName('input');
+    let program = [];
+    for(let cell of cells){
+        program.append(cell.value);
+    }
+    let errors = Checker.check(program);
+    if( errors.length === 0 ){
+        Computer.cycle();
+    }
+    else{
+        UI.showRomErrors(errors);
+    }
+};
