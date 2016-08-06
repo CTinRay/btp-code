@@ -31,7 +31,7 @@ Computer.Memory = function(domId){
     
     memory.write = function(address, value){
         highlight(address);
-        return memory.cells[address].value;
+        memory.cells[address].value = value;
     };
 
     return memory;
