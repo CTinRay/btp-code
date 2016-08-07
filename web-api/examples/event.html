@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Event Example</title>        
+    </head>
+    <body>
+        Press  Ctrl + Shift + k in Firefox to open cosole and see the log.
+        
+        <div class="area" onclick='handler1()' id="a1">
+            onclick='handler1();'
+        </div>
+
+        <div class="area" id="a2">
+            document.getElementById('a2').addEventListener('click', handler2);
+        </div>
+
+        <div class="area" id="a3">
+            document.getElementById('a3').onclick =  handler2;
+        </div>
+
+        <script>
+         
+         document.getElementById('a2').addEventListener('click', handler2);
+         document.getElementById('a3').onclick =  handler2;
+
+         function handler1(){
+             console.log("Clicked!! From target a1");
+         };
+         
+         function handler2(event){
+             console.log("Clicked!! From target", event.target.id);
+             console.log("event object:", event);
+         };
+        </script>
+        
+        <style>
+         .area {
+             width: 80%;
+             height: 300px;
+             margin: auto;
+             background-color: gray;
+             margin-top: 10px;
+             margin-bottom: 10px;
+             border-color: yellow;
+             border-width: 2px;
+         }
+        </style>
+    </body>
+</html>

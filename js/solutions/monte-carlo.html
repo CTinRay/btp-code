@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Monte Carlo Pi</title>        
+    </head>
+    <body>
+        <canvas id="canvas" ></canvas>
+        
+        <script>
+         const radius = 500;
+         var canvas = document.getElementById("canvas");
+         canvas.setAttribute('width', 2 * radius + 'px');
+         canvas.setAttribute('height', 2 * radius + 'px');
+         var ctx = canvas.getContext("2d");
+
+         
+         function dot(x, y, color){
+             ctx.fillStyle = color;
+             ctx.beginPath();
+             ctx.ellipse(x, y, 1, 1, 0, 0, 2 * Math.PI);
+             ctx.fill();
+         }
+         
+         function redDot(x, y){
+             dot(x, y, 'red');
+         }
+
+         function blueDot(x, y){
+             dot(x, y, 'blue');
+         }
+
+         let nIn = 0;
+         let nAll = 100000;
+         for( let i = 0; i < nAll; ++i ){
+             let x = Math.random() * 2 * radius;
+             let y = Math.random() * 2 * radius;
+             if( Math.pow(x - radius, 2) + Math.pow(y - radius, 2) < Math.pow(radius, 2) ){
+                 redDot(x, y);
+                 nIn += 1;
+             }
+             else{
+                 blueDot(x, y);
+             }
+         }
+         console.log('pi:', nIn / nAll * 4);
+        </script>
+    </body>
+</html>
+
