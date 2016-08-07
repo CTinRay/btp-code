@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Monte Carlo Pi</title>        
+    </head>
+    <body>
+        <canvas id="canvas" ></canvas>
+        
+        <script>
+         const radius = 500;
+         var canvas = document.getElementById("canvas");
+         canvas.setAttribute('width', 2 * radius + 'px');
+         canvas.setAttribute('height', 2 * radius + 'px');
+         var ctx = canvas.getContext("2d");
+         
+         function dot(x, y, color){
+             ctx.fillStyle = color;
+             ctx.beginPath();
+             ctx.ellipse(x, y, 1, 1, 0, 0, 2 * Math.PI);
+             ctx.fill();
+         }
+
+         // use this function to draw a red dot on the page.
+         // (for point in circle)
+         function redDot(x, y){
+             dot(x, y, 'red');
+         }
+
+         // use this function to draw a dot on the page
+         // (for point in circle)
+         function blueDot(x, y){
+             dot(x, y, 'blue');
+         }
+
+         let pi;
+
+         // Do Monte Carlo and store pi in variable pi.
+         // Please generate 10000 points randomly in range [0, 2 * radius]
+         // (variable radius has been defined for you)
+         // then see how many points is in circle.
+         // For points in circle, draw then with function redDot
+         // For points out of circle, draw then with function redBlue
+         // Have fun!
+         
+         // todo here
+         // ...         
+
+         console.log('pi:', pi);
+        </script>
+    </body>
+</html>
+
