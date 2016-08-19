@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>CSS: Gradient</title>
+    </head>
+    <body>
+        
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="g6"></div>
+
+        <style>
+
+         html body {
+             margin: 0px;
+         }
+         
+         div {
+             width: 300px;
+             height: 300px;
+             position: absolute;
+             margin: 20px;
+         }
+
+         .g1 {
+             background: linear-gradient(to right, red, yellow, blue);
+             left: 20px;
+         }
+
+         .g2 {
+             background: linear-gradient(to right, red 50%, yellow, blue);
+             left: 340px;
+         }
+
+         .g3 {
+             background: linear-gradient(45deg, red, yellow, blue);
+             left: 660px;
+         }
+         
+         .g4 {
+             background: radial-gradient(circle at 5% 5%, red, yellow, blue);
+             top: 340px;
+             left: 20px;
+             
+         }
+
+         .g5 {
+             background: radial-gradient(ellipse 100px 50px, red, yellow, blue);
+             top: 340px;
+             left: 340px;
+         }
+
+         .g6 {
+             background: radial-gradient(ellipse closest-corner, red, yellow, blue);
+             top: 340px;
+             left: 660px;
+         }
+
+         
+        </style>
+    </body>
+</html>

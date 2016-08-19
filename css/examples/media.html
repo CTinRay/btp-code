@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>CSS: Media</title>
+    </head>
+    <body>
+        
+        <span class="big">Width more than 500px.</span>
+
+        <span class="small">Width less than 300px.</span>
+
+        
+        <style>
+         span {
+             display: none;
+         }
+         
+         @media (max-width: 300px){
+             .small {
+                 display: inline;
+             }
+         }
+
+         @media (min-width: 400px){
+             .big {
+                 display: inline;
+             }
+         }
+
+        </style>
+    </body>
+</html>
