@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>CSS: Box Model</title>
+    </head>
+    <body>
+        
+        <div class="outter">
+            <div class="box">
+                <span>
+                    Do you see the gap between this text and the border? This is padding!
+                </span>
+                <span class="explain">This is a box with padding and margin.</span>
+            </div>
+            Do you see the gap between the red border and blue border? This is margin!            
+            <span class="explain">outter box</span>
+                        
+        </div>
+        <br><br>
+        <div class="outter">
+            <div class="no">
+                <span>
+                    No gap between this text and the border here.
+                </span>                
+
+                <span class="explain">This is a box with no padding and margin.</span>                
+            </div>
+            <span class="explain">outter box</span>
+        </div>
+        
+        <style>
+
+         html body {
+             margin: 0px;
+         }
+         
+         .box {
+             background: #BBFF55;
+             width: 300px;
+             height: 300px;
+             border: blue solid 5px;
+             position: relative;
+             color: blue;
+
+             margin: 20px;
+             padding: 40px;
+         }
+
+         .no {
+             background: #BBFF55;
+             width: 300px;
+             height: 300px;
+             border: blue solid 5px;
+             position: relative;
+             color: blue;
+         }             
+         
+         .inner {
+             border: #11AAAA solid 5px;
+             color: #11AAAA;
+             height: 40px;
+             position: relative;
+         }
+
+         .outter {
+             border: red solid 5px;
+             color: red;
+             position: relative;
+         }
+
+         .explain {
+             position: absolute;
+             bottom: 0px;
+             text-align: center;
+             width: 100%;
+             left: 0px;
+         }
+         
+        </style>
+    </body>
+</html>
