@@ -26,15 +26,15 @@ var Instruction = {
     mvi: {
         nArg: 2,
         exe: function(pc, ram, args){
-            ram.write(args[1], ram.read(ram.read(args[0])));
+            ram.write(ram.read(args[1]), ram.read(args[0]));
             return pc + 1;
         }        
     },
     // imv [address] address
     imv: {
         nArg: 2,
-        exe: function(pc, ram, args){
-            ram.write(ram.read(args[1]), ram.read(args[0]));
+        exe: function(pc, ram, args){            
+            ram.write(args[1], ram.read(ram.read(args[0])));
             return pc + 1;
         }
     },
