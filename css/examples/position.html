@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>CSS: Position</title>
+    </head>
+    <body>
+        <div class="absolute">
+            I am absolute.
+        </div>
+
+        <div class="fix">
+            I am fix.
+        </div>
+       
+        <div class="relative">
+            I am relative.
+        </div>
+        
+        <style>
+         html {
+             height: 100%;
+         }
+         
+         body {             
+             height: 300%;
+             width: 100%;
+         }
+         
+         div {
+             background: #BBFF55;
+             width: 100px;
+             height: 100px;
+         }
+
+         .absolute {
+             position: absolute;
+             top: 20px;
+             left: 320px;
+         }
+
+         .fix {
+             position: fixed;
+             top: 20px;
+             left: 440px;
+         }
+
+         .relative {
+             position: relative;
+             top: 20px;
+             left: 20px;
+         }
+         
+        </style>
+    </body>
+</html>
