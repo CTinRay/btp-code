@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>CSS: Overflow</title>
+    </head>
+    <body>
+        
+        <div class="box hidden">
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            text
+        </div>
+
+        <div class="box visible">
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            text            
+        </div>
+
+        <div class="box scroll">
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            long long long long long long long long long long long long long long long long
+            text            
+        </div>
+
+        
+        <style>
+
+         html body {
+             margin: 0px;
+         }
+         
+         .box {
+             width: 100px;
+             height: 200px;
+             border: blue solid 5px;
+             position: absolute;
+             margin: 20px;
+         }
+
+         .visible {
+             overflow-y: visible;
+             left: 40px;
+         }
+
+         .hidden {
+             overflow-y: hidden;
+             left: 280px;
+         }
+
+         .scroll {
+             overflow-y: scroll;
+             left: 520px;
+         }
+
+        </style>
+    </body>
+</html>
