@@ -32,3 +32,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 code {
     font-size: 2em;
 }
+
+
+.reveal blockquote {
+    width: 100%;
+    text-align: left;
+}
