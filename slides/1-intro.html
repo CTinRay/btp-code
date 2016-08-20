@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>網頁程式設計</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js//css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js//css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'http://lab.hakim.se/reveal-js//css/print/pdf.css' : 'http://lab.hakim.se/reveal-js//css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="http://lab.hakim.se/reveal-js//lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">網頁程式設計</h1>
+</section>
+
+<section><section id="網頁程式設計" class="titleslide slide level1"><h1>網頁程式設計</h1></section><section id="我們是誰" class="slide level2">
+<h1>我們是誰？</h1>
+</section><section id="為什麼我們在這裡" class="slide level2">
+<h1>為什麼我們在這裡？</h1>
+</section><section class="slide level2">
+
+<p>為什麼你們在這...？</p>
+</section><section id="課程..." class="slide level2">
+<h1>課程...</h1>
+<ul>
+<li class="fragment">目標</li>
+<li class="fragment">鬆散（?</li>
+<li class="fragment">小 Project （！？</li>
+</ul>
+</section><section id="網頁-程式-設計" class="slide level2">
+<h1>網頁 程式 設計</h1>
+<ul>
+<li class="fragment">網頁？</li>
+<li class="fragment">網頁程式？</li>
+<li class="fragment">程式設計？</li>
+</ul>
+</section><section id="課程規劃" class="slide level2">
+<h1>課程規劃</h1>
+<ul>
+<li class="fragment">程式運作 / Javascript</li>
+<li class="fragment">Javascript / CSS + Js with HTML + Canvas</li>
+<li class="fragment">Django / Coding..... + Presentation (!?)</li>
+</ul>
+</section></section>
+<section><section id="淺談程式運作" class="titleslide slide level1"><h1>淺談程式運作</h1></section><section id="程式" class="slide level2">
+<h1>程式？</h1>
+<ul>
+<li class="fragment">指令 + 指令 + 指令 + 指令 + ...</li>
+<li class="fragment">指令：命令電腦做事</li>
+</ul>
+</section><section id="電腦" class="slide level2">
+<h1>電腦？</h1>
+<ul>
+<li class="fragment">想像一個黑盒子...</li>
+<li class="fragment">RAM</li>
+<li class="fragment">CPU</li>
+<li class="fragment">手邊有一塊 ROM ...</li>
+</ul>
+</section><section id="ramrom" class="slide level2">
+<h1>RAM/ROM？</h1>
+<ul>
+<li class="fragment">一堆格子</li>
+<li class="fragment">有編號</li>
+<li class="fragment">長得像 <a href="https://btp-code.github.io/btp-code/psudo-assembly-interpreter/" class="uri">https://btp-code.github.io/btp-code/psudo-assembly-interpreter/</a></li>
+</ul>
+</section><section id="開始跑" class="slide level2">
+<h1>開始跑~</h1>
+<ul>
+<li class="fragment">把程式寫到 ROM</li>
+<li class="fragment">插上去</li>
+</ul>
+</section><section id="program-counter" class="slide level2">
+<h1>Program Counter</h1>
+<ul>
+<li class="fragment">一開始是 0</li>
+<li class="fragment">+1 +1 ...</li>
+</ul>
+</section><section id="section" class="slide level2">
+<h1>？？</h1>
+</section><section id="偷看偷摸" class="slide level2">
+<h1>偷看偷摸</h1>
+<p><a href="https://btp-code.github.io/btp-code/psudo-assembly-interpreter/" class="uri">https://btp-code.github.io/btp-code/psudo-assembly-interpreter/</a></p>
+</section><section id="第-1-1-個指令" class="slide level2">
+<h1>第 1 ＋ 1 個指令</h1>
+<ul>
+<li class="fragment">hlt</li>
+<li class="fragment">set addr const</li>
+</ul>
+<blockquote>
+<p>Exercise: 把 RAM 位址 4 設成 12345</p>
+</blockquote>
+</section><section id="一堆指令" class="slide level2">
+<h1>一堆指令</h1>
+<h3 id="記憶體操作指令">記憶體操作指令</h3>
+<ul>
+<li class="fragment">mov addr1 addr2: 把記憶體位址 <code>addr1</code> 的值複製到 <code>addr2</code>。</li>
+<li class="fragment">mvi addr1 addr2: 把記憶體位址 <code>addr1</code> 的值複製到記憶體位址 <code>addr2</code> 儲存的位址。</li>
+<li class="fragment">imv addr1 addr2: 複製記憶體位址 <code>addr1</code> 儲存的位址的值到 <code>addr2</code>。</li>
+</ul>
+</section><section id="一堆指令-1" class="slide level2">
+<h1>一堆指令</h1>
+<h3 id="數學運算指令">數學運算指令</h3>
+<ul>
+<li class="fragment">inc addr const: 增加記憶體位置 <code>addr</code> 的值 <code>const</code></li>
+<li class="fragment">add addr1 addr2 addr3: 把記憶體位址 <code>addr2</code> 的值加上 <code>addr3</code>的值儲存到 <code>addr1</code>。</li>
+<li class="fragment">sub addr1 addr2 addr3: 把記憶體位址 <code>addr2</code> 的值減去 <code>addr3</code>的值儲存到 <code>addr1</code>。</li>
+</ul>
+</section><section id="一堆指令-2" class="slide level2">
+<h1>一堆指令</h1>
+<h3 id="位元運算指令">位元運算指令</h3>
+</section><section id="一堆指令-3" class="slide level2">
+<h1>一堆指令</h1>
+<h3 id="流程控制指令">流程控制指令</h3>
+<ul>
+<li class="fragment">jmp pc: 跳到 pc 的位址（設定 Program Counter 為 pc）。</li>
+<li class="fragment">jeq address pc: 如果記憶體位址 address 的值等於零，則跳到 pc 的位址（設定 Program Counter 為 pc）。</li>
+<li class="fragment">jgt address pc: 如果記憶體位址 address 的值大於零，則跳到 pc 的位址（設定 Program Counter 為 pc）。</li>
+<li class="fragment">jlt address pc: 如果記憶體位址 address 的值小於零，則跳到 pc 的位址（設定 Program Counter 為 pc）。</li>
+</ul>
+</section><section id="exercises" class="slide level2">
+<h1>Exercises!!!</h1>
+<blockquote>
+<p>Exercise: 在記憶體位址 2 儲存位址 0 的值乘以位址 1 的值的結果。（只考慮{正整數 + 0}）</p>
+</blockquote>
+<blockquote>
+<p>Exercise: 在記憶體位址 5 儲存位址 0 的值 + 位址 1 的值 + ... + 位址 4 的值。（hint: imv）</p>
+</blockquote>
+<blockquote>
+<p>Exercise: 把記憶體位址 0 ~ 100 的值分別設成 0 ~ 100。(hint: mvi)</p>
+</blockquote>
+</section><section id="想像中現代的電腦" class="slide level2">
+<h1>想像中/現代的電腦</h1>
+<ul>
+<li class="fragment">可算的東西<strong>一樣</strong>！</li>
+<li class="fragment">偷摸偷看 v.s. 輸入/輸出</li>
+<li class="fragment">更更更更更複雜</li>
+<li class="fragment">指令更多</li>
+<li class="fragment">結構更複雜（週邊設備）</li>
+</ul>
+</section><section id="實際上的電腦" class="slide level2">
+<h1>「實際」上的電腦</h1>
+<ul>
+<li class="fragment">ROM？</li>
+<li class="fragment">指令與資料？</li>
+<li class="fragment">暫存器（Register）？</li>
+</ul>
+</section><section id="運作" class="slide level2">
+<h1>運作？</h1>
+<ul>
+<li class="fragment">二進位編碼的指令</li>
+<li class="fragment">Decoder</li>
+<li class="fragment">Data Flow</li>
+<li class="fragment"><a href="http://www.nand2tetris.org/lectures/PDF/lecture%2005%20computer%20architecture.pdf">大一計概</a>（好課!!）</li>
+<li class="fragment">大三計算機結構（！？？）</li>
+</ul>
+</section><section id="程式語言" class="slide level2">
+<h1>程式語言</h1>
+<ul>
+<li class="fragment">組合語言</li>
+<li class="fragment">高階語言</li>
+<li class="fragment">靜態語言（C, C++）</li>
+<li class="fragment">動態語言（Javascript, Python）</li>
+<li class="fragment">強/弱型別</li>
+</ul>
+</section></section>
+<section><section id="javascript" class="titleslide slide level1"><h1>Javascript</h1></section><section id="型別" class="slide level2">
+<h1>型別</h1>
+<ul>
+<li class="fragment">字串 string</li>
+<li class="fragment">數字 number</li>
+<li class="fragment">陣列 array</li>
+<li class="fragment"><p>...</p></li>
+<li class="fragment">1 + 'good' ?</li>
+<li class="fragment"><p>-&gt; 做適合的動作</p></li>
+</ul>
+</section><section id="變數variable" class="slide level2">
+<h1>變數（Variable）</h1>
+<ul>
+<li class="fragment">記憶體位址</li>
+<li class="fragment">存任何東西</li>
+</ul>
+</section><section id="語法宣告變數" class="slide level2">
+<h1>語法：宣告變數</h1>
+<ul>
+<li class="fragment">變數名稱規則</li>
+<li class="fragment">區分大小寫（Case Sensitive）</li>
+<li class="fragment">大小寫英文、數字、底線</li>
+<li class="fragment">不可以是數字開頭</li>
+<li class="fragment">留一塊空間（感覺）</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">let</span> v1<span class="op">;</span>
+<span class="kw">var</span> v2<span class="op">;</span></code></pre></div>
+</section><section id="變數有效範圍scope" class="slide level2">
+<h1>變數有效範圍（Scope）</h1>
+<p>就 <code>let</code> 而言</p>
+<ul>
+<li class="fragment">宣告後</li>
+<li class="fragment">在同一個 <code>{}</code> 裡</li>
+</ul>
+</section><section id="字面常量" class="slide level2">
+<h1>字面常量</h1>
+<ul>
+<li class="fragment">數字：
+<ul>
+<li class="fragment">一般：<code>1234</code></li>
+<li class="fragment">8進位： <code>055</code></li>
+<li class="fragment">16進位： <code>0xFF</code></li>
+</ul></li>
+<li class="fragment">字串：
+<ul>
+<li class="fragment"><code>&quot;this is a string&quot;</code></li>
+<li class="fragment"><code>'this is a string too'</code></li>
+</ul></li>
+</ul>
+</section><section id="型別轉換" class="slide level2">
+<h1>型別轉換</h1>
+<ul>
+<li class="fragment">轉成字串</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">String</span>(<span class="dv">1234</span>)<span class="op">;</span></code></pre></div>
+<ul>
+<li class="fragment">轉成數字</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">Number</span>(<span class="st">&#39;1234&#39;</span>)<span class="op">;</span></code></pre></div>
+<ul>
+<li class="fragment">自動轉換（！）</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="st">&quot;5&quot;</span> <span class="op">+</span> <span class="dv">3</span></code></pre></div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="http://lab.hakim.se/reveal-js//lib/js/head.min.js"></script>
+  <script src="http://lab.hakim.se/reveal-js//js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Turns fragments on and off globally
+        fragments: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'http://lab.hakim.se/reveal-js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'http://lab.hakim.se/reveal-js//plugin/zoom-js/zoom.js', async: true },
+          { src: 'http://lab.hakim.se/reveal-js//plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
