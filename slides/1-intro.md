@@ -157,10 +157,12 @@
   
 ## 型別
 
+* Undefined
+* Null
+* 布林 Boolean
 * 字串 string
 * 數字 number
-* 陣列 array
-* ...
+* 物件 Object
 
 * 1 + 'good' ?
 * -> 做適合的動作 
