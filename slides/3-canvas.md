@@ -4,7 +4,7 @@
 
 參考 [MDN 上的教學](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
 
-## Playground
+## [Playground](../web-api/examples/canvas.html)
 
 ```html
 <!DOCTYPE html>
