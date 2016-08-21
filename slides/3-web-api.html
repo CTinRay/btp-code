@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js//css/reveal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -46,18 +46,18 @@ code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Ann
 code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
-  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js//css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/theme/black.css" id="theme">
   <link rel="stylesheet" href="highlight.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'http://lab.hakim.se/reveal-js//css/print/pdf.css' : 'http://lab.hakim.se/reveal-js//css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="http://lab.hakim.se/reveal-js//lib/js/html5shiv.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -119,7 +119,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">    <span class="va">element</span>.<span class="va">parentElement</span>.<span class="at">removeChild</span>(element)<span class="op">;</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">    <span class="va">element</span>.<span class="at">remove</span>()</code></pre></div>
 </section></section>
-<section><section id="事件處理event-processing" class="titleslide slide level1"><h1>事件處理（Event Processing）</h1></section><section id="註冊事件處理函式" class="slide level2">
+<section><section id="事件處理-event-processing" class="titleslide slide level1"><h1>事件處理 <br>（Event Processing）</h1></section><section id="註冊事件處理函式" class="slide level2">
 <h1>註冊事件處理函式</h1>
 <h3 id="在-html-裡指定">在 HTML 裡指定</h3>
 <ul>
@@ -144,11 +144,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section><section id="註冊事件處理函式-2" class="slide level2">
 <h1>註冊事件處理函式</h1>
 <h3 id="js-addeventlistener">js: addEventListener</h3>
-<pre><code>document.getElementById(&#39;btn&#39;).addEventListener(&#39;click&#39;, handler);
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&#39;btn&#39;</span>).<span class="at">addEventListener</span>(<span class="st">&#39;click&#39;</span><span class="op">,</span> handler)<span class="op">;</span>
 
-function handler(event){
-    console.log(&#39;clicked!! event:&#39;, event);
-};</code></pre>
+<span class="kw">function</span> <span class="at">handler</span>(event)<span class="op">{</span>
+    <span class="va">console</span>.<span class="at">log</span>(<span class="st">&#39;clicked!! event:&#39;</span><span class="op">,</span> event)<span class="op">;</span>
+<span class="op">};</span></code></pre></div>
 </section><section id="範例" class="slide level2">
 <h1><a href="https://btp-code.github.io/btp-code/web-api/examples/event.html">範例</a></h1>
 </section><section id="exercise-3" class="slide level2">
@@ -180,8 +180,8 @@ function handler(event){
     </div>
   </div>
 
-  <script src="http://lab.hakim.se/reveal-js//lib/js/head.min.js"></script>
-  <script src="http://lab.hakim.se/reveal-js//js/reveal.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//js/reveal.js"></script>
 
   <script>
 
@@ -197,9 +197,9 @@ function handler(event){
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'http://lab.hakim.se/reveal-js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'http://lab.hakim.se/reveal-js//plugin/zoom-js/zoom.js', async: true },
-          { src: 'http://lab.hakim.se/reveal-js//plugin/notes/notes.js', async: true }
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/notes/notes.js', async: true }
         ]
       });
     </script>
