@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js//css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js//css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="highlight.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'http://lab.hakim.se/reveal-js//css/print/pdf.css' : 'http://lab.hakim.se/reveal-js//css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="http://lab.hakim.se/reveal-js//lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section><section id="web-api" class="titleslide slide level1"><h1>Web API</h1></section><section id="dom" class="slide level2">
+<h1>DOM</h1>
+</section><section id="取得元素" class="slide level2">
+<h1>取得元素</h1>
+<ul>
+<li class="fragment"><code>document.getElementById</code></li>
+<li class="fragment"><code>document.getElementsTagName</code> (return array)</li>
+<li class="fragment"><code>document.getElementByClassName</code> (return array)</li>
+</ul>
+</section><section id="exercise" class="slide level2">
+<h1>Exercise</h1>
+<blockquote>
+<p>使用 <code>console.log</code> 印出一個頁面上的物件。</p>
+</blockquote>
+</section><section id="元素物件屬性" class="slide level2">
+<h1>元素物件屬性</h1>
+<ul>
+<li class="fragment"><code>Element.className</code></li>
+<li class="fragment"><code>Element.innerHTML</code></li>
+<li class="fragment"><code>Element.style</code></li>
+<li class="fragment"><code>HTMLInputElement.value</code></li>
+</ul>
+</section><section id="exercise-1" class="slide level2">
+<h1>Exercise</h1>
+<blockquote>
+<p>使用 <code>Element.style</code> 移動一個元素的位址。（你可能會需要考慮 position 屬性）</p>
+</blockquote>
+</section><section id="元素物件方法" class="slide level2">
+<h1>元素物件方法</h1>
+<ul>
+<li class="fragment"><code>Element.getAttribute(attributeName)</code></li>
+<li class="fragment"><code>Element.setAttribute(attributeName, value)</code></li>
+<li class="fragment"><code>Element.removeAttribute(attributeName)</code></li>
+</ul>
+</section><section id="exercise-2" class="slide level2">
+<h1>Exercise</h1>
+<blockquote>
+<p>使用 <code>Element.innerHTML</code> 顯示九九乘法表。（注意：你的 script 必須放在 body 內容的最後面，否則可能會失敗。）</p>
+</blockquote>
+<blockquote>
+<p>使用 <code>Element.setAttribute('disabled', 'disabled')</code> 使一個按鈕失效。</p>
+</blockquote>
+</section><section id="新增元素" class="slide level2">
+<h1>新增元素</h1>
+<ul>
+<li class="fragment"><code>document.createElement(tagName)</code></li>
+<li class="fragment"><code>parent.appendChild(element)</code></li>
+<li class="fragment"><code>document.createTextNode(text)</code></li>
+</ul>
+</section><section id="刪除元素" class="slide level2">
+<h1>刪除元素</h1>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">    <span class="va">element</span>.<span class="va">parentElement</span>.<span class="at">removeChild</span>(element)<span class="op">;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">    <span class="va">element</span>.<span class="at">remove</span>()</code></pre></div>
+</section></section>
+<section><section id="事件處理event-processing" class="titleslide slide level1"><h1>事件處理（Event Processing）</h1></section><section id="註冊事件處理函式" class="slide level2">
+<h1>註冊事件處理函式</h1>
+<h3 id="在-html-裡指定">在 HTML 裡指定</h3>
+<ul>
+<li class="fragment">元素的 Event Handler 屬性
+<ul>
+<li class="fragment">onclick （滑鼠按下）</li>
+<li class="fragment">ondbclick （滑鼠按兩下）</li>
+<li class="fragment">onchange （input 的值被改變）</li>
+<li class="fragment">onselect</li>
+<li class="fragment">...</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> onclick=</span><span class="st">&#39;handler()&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></code></pre></div>
+</section><section id="註冊事件處理函式-1" class="slide level2">
+<h1>註冊事件處理函式</h1>
+<h3 id="js-onxxx">js: onXXX</h3>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&#39;btn&#39;</span>).<span class="at">onclick</span> <span class="op">=</span> handler<span class="op">;</span>
+
+<span class="kw">function</span> <span class="at">handler</span>(event)<span class="op">{</span>
+    <span class="va">console</span>.<span class="at">log</span>(<span class="st">&#39;clicked!! event:&#39;</span><span class="op">,</span> event)<span class="op">;</span>
+<span class="op">};</span></code></pre></div>
+</section><section id="註冊事件處理函式-2" class="slide level2">
+<h1>註冊事件處理函式</h1>
+<h3 id="js-addeventlistener">js: addEventListener</h3>
+<pre><code>document.getElementById(&#39;btn&#39;).addEventListener(&#39;click&#39;, handler);
+
+function handler(event){
+    console.log(&#39;clicked!! event:&#39;, event);
+};</code></pre>
+</section><section id="範例" class="slide level2">
+<h1><a href="https://btp-code.github.io/btp-code/web-api/examples/event.html">範例</a></h1>
+</section><section id="exercise-3" class="slide level2">
+<h1>Exercise</h1>
+<blockquote>
+<p>建立兩個 type 為 number 的 input，並在旁邊即時顯示兩個 input 數字相乘的結果。（提示：使用 <code>onchange</code> 或 <code>change</code>。）</p>
+</blockquote>
+<blockquote>
+<p>利用 <code>window.onload</code> 在頁面載入後用 js 建立一個長度為 100 、每一項的內容從 100 到 1 的列表。</p>
+</blockquote>
+<blockquote>
+<p>對於上一題做出來的列表中的每一項，按一下即刪除。（event object 的 traget 屬性可能很有用）</p>
+</blockquote>
+</section></section>
+<section><section id="雜七雜八" class="titleslide slide level1"><h1>雜七雜八</h1></section><section id="計時器" class="slide level2">
+<h1>計時器</h1>
+<ul>
+<li class="fragment">window.setInterval(func, delay)</li>
+<li class="fragment">window.setTimeout(func, delay)</li>
+<li class="fragment">window.clearInterval(id)</li>
+<li class="fragment">window.clearTimeout(id)</li>
+</ul>
+</section><section id="exercise-4" class="slide level2">
+<h1>Exercise</h1>
+<blockquote>
+<p>時鐘 :)</p>
+</blockquote>
+</section></section>
+    </div>
+  </div>
+
+  <script src="http://lab.hakim.se/reveal-js//lib/js/head.min.js"></script>
+  <script src="http://lab.hakim.se/reveal-js//js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Turns fragments on and off globally
+        fragments: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'http://lab.hakim.se/reveal-js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'http://lab.hakim.se/reveal-js//plugin/zoom-js/zoom.js', async: true },
+          { src: 'http://lab.hakim.se/reveal-js//plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
