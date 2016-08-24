@@ -19,6 +19,7 @@
 
 * 目標
 * 鬆散（?
+* Exercise!!!!
 * 小 Project （！？
 
 ## 網頁 程式 設計
@@ -149,8 +150,8 @@
 
 * 組合語言
 * 高階語言
-  * 靜態語言（C, C++）
-  * 動態語言（Javascript, Python）
+  * 靜態語言（C, C++）：編譯器
+  * 動態語言（Javascript, Python）：直譯器
   * 強/弱型別
   
 # Javascript  
