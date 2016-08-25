@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Javascript</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="highlight.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Javascript</h1>
+</section>
+
+<section><section id="javascript" class="titleslide slide level1"><h1>JavaScript</h1></section><section id="物件" class="slide level2">
+<h1>物件</h1>
+<ul>
+<li class="fragment">物品</li>
+<li class="fragment">分類</li>
+</ul>
+</section><section id="建立物件" class="slide level2">
+<h1>建立物件</h1>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">    <span class="kw">new</span> <span class="at">XXX</span>()<span class="op">;</span></code></pre></div>
+</section><section id="建立物件-1" class="slide level2">
+<h1>建立物件</h1>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">    <span class="kw">var</span> obj <span class="op">=</span> <span class="op">{}</span></code></pre></div>
+</section><section id="物件的屬性方法" class="slide level2">
+<h1>物件的屬性、方法</h1>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">    <span class="va">obj</span>.<span class="at">XXX</span>
+    obj[<span class="st">&#39;XXX&#39;</span>]</code></pre></div>
+</section></section>
+<section><section id="內建物件" class="titleslide slide level1"><h1>內建物件</h1></section><section id="陣列" class="slide level2">
+<h1>陣列</h1>
+<h3 id="建立陣列">建立陣列</h3>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">var</span> a <span class="op">=</span> []<span class="op">;</span>
+<span class="kw">var</span> b <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">;</span></code></pre></div>
+</section><section id="陣列-1" class="slide level2">
+<h1>陣列</h1>
+<h3 id="section">[]</h3>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">a[<span class="dv">5</span>] <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></code></pre></div>
+<blockquote>
+<p>Exercise: 陣列的合。</p>
+</blockquote>
+</section><section id="陣列-2" class="slide level2">
+<h1>陣列</h1>
+<h3 id="屬性方法">屬性、方法</h3>
+<ul>
+<li class="fragment">a.length： 陣列的長度</li>
+<li class="fragment">a.indexOf()：找到元素的位置</li>
+<li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">More...</a></li>
+</ul>
+</section><section id="字串" class="slide level2">
+<h1>字串</h1>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">s <span class="op">=</span> <span class="st">&quot;abcde&quot;</span></code></pre></div>
+<ul>
+<li class="fragment">s[N]：取得第N個字</li>
+<li class="fragment">s1 + s2：把 s1 跟 s2 接起來。</li>
+</ul>
+</section><section id="字串-1" class="slide level2">
+<h1>字串</h1>
+<ul>
+<li class="fragment">s.split(',')：把字串按照','切成一段一段。</li>
+<li class="fragment">s.slice(start, end)：取得 start 到 end 部分的字串。</li>
+<li class="fragment">s.replace(a, b)：把字串裡的 a 取代成 b。</li>
+<li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">More...</a></li>
+</ul>
+</section><section id="時間" class="slide level2">
+<h1>時間</h1>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">var</span> d <span class="op">=</span> <span class="kw">new</span> <span class="at">Date</span>()<span class="op">;</span></code></pre></div>
+</section><section id="時間-1" class="slide level2">
+<h1>時間</h1>
+<ul>
+<li class="fragment">年：date.getFullYear()</li>
+<li class="fragment">月：date.getMonth()</li>
+<li class="fragment">日：date.getDate()</li>
+<li class="fragment">星期：date.getDay()</li>
+<li class="fragment">時：date.getHours()</li>
+<li class="fragment">分：date.getMinutes()</li>
+<li class="fragment">秒：date.getSeconds()</li>
+<li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">More...</a></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Turns fragments on and off globally
+        fragments: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
