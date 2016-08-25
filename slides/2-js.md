@@ -88,3 +88,6 @@ var d = new Date();
 * 秒：date.getSeconds()
 * [More...](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
+## Math
+
+0~1 的隨機數：Math.random()
