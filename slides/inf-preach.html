@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>資工系的有趣事</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="highlight.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">資工系的有趣事</h1>
+</section>
+
+<section><section id="傳教時間" class="titleslide slide level1"><h1>傳教時間</h1></section><section id="傳教時間-1" class="slide level2">
+<h1><del>傳教時間</del></h1>
+</section><section id="資工系的有趣事" class="slide level2">
+<h1>資工系的有趣事</h1>
+</section></section>
+<section><section id="資料結構與演算法" class="titleslide slide level1"><h1>資料結構與演算法</h1></section><section id="資料結構" class="slide level2">
+<h1>資料結構</h1>
+<ul>
+<li class="fragment">link list</li>
+<li class="fragment">tree</li>
+</ul>
+</section><section id="演算法" class="slide level2">
+<h1>演算法</h1>
+<ul>
+<li class="fragment">排序 <span class="math inline">\(N\)</span> 個數字需要比較 <span class="math inline">\(N^2\)</span>？</li>
+<li class="fragment"><span class="math inline">\(N \log_2{N}\)</span></li>
+<li class="fragment"><span class="math inline">\(1000^2 \approx 1000000\)</span> v.s. <span class="math inline">\(1000 \times \log_2{1000} \approx 9965\)</span></li>
+</ul>
+</section></section>
+<section><section id="自然語言處理" class="titleslide slide level1"><h1>自然語言處理</h1></section><section id="n-gram" class="slide level2">
+<h1>N-Gram</h1>
+<ul>
+<li class="fragment"><span class="math inline">\(P(w_2 | w_1) = \frac{P(w_1, w_2)}{P(w_1)}\)</span></li>
+</ul>
+</section><section id="colocation" class="slide level2">
+<h1>Colocation</h1>
+<ul>
+<li class="fragment">常一起出現的字 <span class="math inline">\(\implies\)</span> 出現機率不獨立</li>
+</ul>
+</section><section id="pmi" class="slide level2">
+<h1>PMI</h1>
+<ul>
+<li class="fragment"><span class="math inline">\(\log{\frac{P(x, y)}{P(x)P(y)}}\)</span></li>
+</ul>
+</section><section id="term-project" class="slide level2">
+<h1>Term Project</h1>
+<pre><code>10      5       你們說呢 EMOTICON
+11      18      看吧.要跟我一樣.悠哉悠哉的小跑步才行ㄡ EMOTICON
+12      4       要當一隻帥狗也不是那麼容意的 EMOTICON
+13      5       我要每天玩.每天咬.咬到我跑不動的那一天為止 EMOTICON
+14      12      今天開始要加班了~媽ㄉ~剝奪我晚上聊天打屁的樂趣! EMOTICON
+15      8       昨天~其實根本不在家~害姐姐跟co妮卡等到2點~真是不好意思! EMOTICON
+16      7       第二天則到了龍蟠大草原,雖然熱的要死,但風景也是美到無話可說,且還意外的看到 牛 一家人出來散步,真是HAPPY!!而下午,則到了南灣海灘,玩了沙灘排球和沙雕,且也一身濕, EMOTICON  到了晚上,我們到了悠活大飯店,玩盡了許多設施,粉HAPPY的!!對了,我們還去逛了墾丁的夜市,看到了猛男秀,吃了許多奇怪的東西ex:印度拉茶ˋ炸鮮奶等,還吃了土耳其冰淇淋,還被老闆耍了老半天,真是超級令我印象深刻的!!
+17      17      獻給全天下為人父、為人子女的!!很感人喔!!真的想掉眼淚了!! EMOTICON
+18      35      好懂事的小孩！ EMOTICON
+19      32      後來，我吃ㄌ三哥、　芒果布丁　則是買ㄌ車站旁邊那家　　好吃好吃　流○水　 EMOTICON</code></pre>
+<p><a href="https://docs.google.com/spreadsheets/d/1OKNOwilIt41GxWliR8t0PzEBjIIid4lfei7Jyy3UCfk/edit#gid=0">結果</a></p>
+</section><section id="hmm" class="slide level2">
+<h1>HMM</h1>
+<ul>
+<li class="fragment">Markov Model：馬可夫模型。</li>
+<li class="fragment">可能性：給你模型，算這個模型輸出 <span class="math inline">\(o_1, o_2, \cdots\)</span> 的機率</li>
+<li class="fragment">解碼：給你模型，找這個模型輸出 <span class="math inline">\(o_1, o_2, \cdots\)</span> 時最有可能的狀態 <span class="math inline">\(s_1, s_2, \cdots\)</span></li>
+<li class="fragment">訓練：給你一堆觀察到的輸出 <span class="math inline">\(o_1, o_2, \cdots\)</span>，找出最有可能的模型。</li>
+</ul>
+</section><section id="word-vector" class="slide level2">
+<h1>Word Vector</h1>
+<p><a href="http://deeplearner.fz-qqq.net/">Online Demo</a></p>
+</section></section>
+<section><section id="機率" class="titleslide slide level1"><h1>機率</h1></section><section id="中央極限定理" class="slide level2">
+<h1>中央極限定理</h1>
+</section><section id="chi-square-test" class="slide level2">
+<h1>Chi-Square Test</h1>
+</section><section id="tf-idf" class="slide level2">
+<h1>TF-IDF</h1>
+<p>對於某個字 w 在文件 d 的重要性：</p>
+<p><span class="math display">\[\text{tf} = \frac{ \text{w 在 d 裡出現的次數} }{ \text{文件的字數} }\]</span> <span class="math display">\[\text{idf} = \frac{ \text{文件的個數} }{ \text{包含 w 的文件個數} }\]</span></p>
+<p><span class="math inline">\(\text{tf-idf} = \text{tf} \times \text{idf}\)</span></p>
+</section></section>
+<section><section id="機器學習" class="titleslide slide level1"><h1>機器學習</h1></section><section id="機器學習-1" class="slide level2">
+<h1>機器學習</h1>
+<ul>
+<li class="fragment"><a href="http://scikit-learn.org/stable/index.html">sklearn</a></li>
+<li class="fragment"><a href="http://www.csie.ntu.edu.tw/~htlin/mooc/">More</a></li>
+<li class="fragment"><a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf">Free Youtube Video</a></li>
+</ul>
+</section><section id="classifier" class="slide level2">
+<h1>Classifier</h1>
+</section><section id="decision-tree" class="slide level2">
+<h1><a href="http://www.csie.ntu.edu.tw/~htlin/mooc/doc/209_present.pdf#page=102">Decision Tree</a></h1>
+<p><img src="./imgs/dt1.png" /> <img src="./imgs/dt.png" /> <img src="./imgs/dtn.png" /></p>
+</section><section id="cluster" class="slide level2">
+<h1>Cluster</h1>
+<figure>
+<img src="http://scikit-learn.org/stable/_images/plot_cluster_comparison_0011.png" />
+</figure>
+<p>以上圖片來自 <a href="http://scikit-learn.org/stable/index.html">sklearn</a> 官方網站文件</p>
+</section><section id="svm" class="slide level2">
+<h1><a href="http://work.caltech.edu/slides/slides15.pdf">SVM</a></h1>
+</section><section id="neuron-network" class="slide level2">
+<h1>Neuron Network</h1>
+<ul>
+<li class="fragment">SoftMax: <span class="math inline">\(\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}\)</span></li>
+<li class="fragment"><a href="https://www.tensorflow.org/versions/r0.9/tutorials/mnist/beginners/index.html">MNIST</a></li>
+<li class="fragment"><a href="http://neuralnetworksanddeeplearning.com/index.html">More</a></li>
+</ul>
+</section></section>
+<section><section id="計算機概論" class="titleslide slide level1"><h1>計算機概論</h1></section><section id="計算機概論-1" class="slide level2">
+<h1>計算機概論</h1>
+<ul>
+<li class="fragment">From Nand to Tetris</li>
+<li class="fragment"><a href="http://www.nand2tetris.org/course.php">More</a></li>
+</ul>
+<blockquote>
+<p>Saad Nasser built our Hack computer when he was 11 years old</p>
+</blockquote>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Turns fragments on and off globally
+        fragments: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
